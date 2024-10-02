@@ -31,8 +31,8 @@ const weatherData = (cityName) => {
       currentTemp.innerHTML = `${Math.trunc(data.main.feels_like)}°C`;
       city.innerHTML = `${data.name}, ${data.sys.country}`;
       const today = new Date();
-      const f = new Intl.DateTimeFormat("en-AU", {
-        timeZone: "Australia/Sydney",
+      const f = new Intl.DateTimeFormat("en-US", {
+        timeZone: "Asia/Kathmandu",
         dateStyle: "full",
         timeStyle: "short",
       });
@@ -46,7 +46,7 @@ const weatherData = (cityName) => {
         "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png"
       }`;
     })
-    .catch(() => alert("ramro sangha city hanna bey saiko"));
+    .catch((err) => alert("City not matched in out database check again and input correct city aacordingly!"));
 };
 
 weatherData("Sydney");
