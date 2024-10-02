@@ -49,4 +49,4 @@ const weatherData = (cityName) => {
     .catch((err) => alert("City not matched in out database check again and input correct city aacordingly!"));
 };
 
-weatherData("Sydney");
+weatherData("Kathmandu");
